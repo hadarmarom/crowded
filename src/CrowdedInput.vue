@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+    <!-- first option with datalist, the second with ul, li
+    datalist is not friendly css wise so i chose to stick to the ul method -->
+
     <!-- <input
       type="text"
       placeholder="Type in here..."
@@ -13,6 +16,7 @@
         {{ result }}
       </option>
     </datalist> -->
+
     <button @click="reset">Reset</button>
     <input
       ref="inputRef"
@@ -66,7 +70,7 @@ export default {
       this.isOpen = true;
     },
     reset() {
-      // this.search = "";//another option to reset the input
+      // this.search = "";// another option to reset the input without using ref
       this.$refs.inputRef.value = null;
     },
   },
